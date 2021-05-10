@@ -1,0 +1,58 @@
+﻿@page "/"
+@using CavCash.BlockExplorer
+@using CavCash.Core
+
+<h1>CavCash Block Explorer</h1>
+
+See all of the transactions here!
+
+@{
+
+    CavBlockchain chain = new CavBlockchain();
+    chain.GetBlockChain();
+}
+
+@foreach (Block b in chain.Blockchain)
+{
+    <div style="background-color: #eee; border-radius: 20px; padding:  20px; max-width: 70vw; overflow-wrap: break-word; margin:  20px">
+        <h1>Block #@b.BlockNumber</h1>
+        <p>@b.Hash</p>
+        @if (string.IsNullOrWhiteSpace(b.ValidatorSignature))
+        {
+            <p style="color: red">Unmined</p>
+        }
+        <hr/>
+        @if(b.Transactions.Count >0)
+        {
+            <h2>Transactions</h2>
+            @foreach (Transaction t in b.Transactions)
+            {
+                <div style="margin-top: 20px; background-color: #fff; overflow-wrap: break-word ">
+                    <h3>Inputs</h3>
+                    @foreach (TransactionInput inputs in t.Inputs)
+                    {
+                        <p>Type: @(inputs.IsCoinbase ? "Coinbase" : "Regular")</p>
+                        <p>From: @(inputs.IsCoinbase ? $"Block #{b.BlockNumber - 1}" : $"Output Hash #{inputs.FromOutput ?? ""}")</p>
+                       
+                    }
+                    <h3>Outputs</h3>
+                    @foreach (TransactionOutput output in t.Outputs)
+                    {
+                        <p>Type: @(output.IsCoinbase ? "Coinbase" : "Regular")</p>
+                        <p style="display: @(!output.IsCoinbase ? "none" : "inline")">To: @(output.To ?? "")</p>
+                        <div style="display: @(output.IsCoinbase ? "none" : "inline")">
+                            <p>Stealth Key: @(output.StealthKey != null ? output.GetStealthKey().ID.ToString() : "Not a stealth transaction")</p>
+                            <p>Epheremal Key: @(output.EpherKey != null ? output.GetEpherKey().Hash.ToString() : "Not a stealth transaction")</p>
+                            <p style="color: white">Address is protected!</p>
+                        </div>
+                        <p>Amount: @(output.Amount) CAV</p>
+                    }
+                    <p>Date/Time: @(t.Time)</p>
+                    <p>Hash:@(t.Hash)</p>
+                </div>
+            }
+        }
+        
+    </div>
+    
+}

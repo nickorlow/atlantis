@@ -1,0 +1,23 @@
+﻿@page "/wallet"
+@using CavCash.BlockExplorer
+@using CavCash.Core
+
+@{
+    CavWallet wallet = new CavWallet();
+    CavBlockchain chain = new CavBlockchain();
+    chain.GetBlockChain();
+  
+    
+}
+
+<h1>Wallet</h1>
+<p>Balance: @(wallet.MyWallet.GetBalanceSync(chain.Blockchain)) CAV</p>
+
+<h2>Address</h2>
+<p>@(wallet.MyWallet.Address)</p>
+
+<h2>Private Key</h2>
+<p>Too fucking lazy to re-write this</p>
+
+
+<button class="btn btn-primary" >Click me</button>
