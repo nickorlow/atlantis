@@ -14,6 +14,7 @@ CavCash aims to be a CryptoCurrency with privacy features similar to Monero.
 - Ring Confidential Transactions
 - Nakamodo consensus for multiple nodes (currently multi-node isn't a thing)
 - Don't use NBitcoin library for Stealth Addresses
+- Rewrite CavCash.BlockExplore to React.js/ts so it's cleaner
 
 ## Whitepaper
 A whitepaper is in the works. Will be posted here when it's closer to the final thing. Not too concerned with getting it out quick since this is just a pet project at the moment.
@@ -25,6 +26,8 @@ Feel free to make PRs about whatever, if they're breaking or they go against som
 
 ### CavCash.BlockExplore
 Our very own (poorly designed) block explorer. Mostly used for debugging. 
+#### Running
+Just build and run. If you're not running a node on localhost:5001, then edit the corresponding string in `CryptoUtils.cs` on line 51
 
 ### CavCash.Wallet
 A CLI wallet used mostly for testing. Running in 'epheremal mode' doesn't save the keys to disk, useful for testing.
