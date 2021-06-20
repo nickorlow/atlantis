@@ -1,4 +1,8 @@
 # CavCash (CAV)
+
+## The name
+The name is a namesake to a company I ran with a few friends during high school
+
 A re-implementation of the CryptoNode protocol in C# with some other goodies.
 
 CavCash aims to be a CryptoCurrency with privacy features similar to Monero.
