@@ -1,13 +1,13 @@
 # CavCash (CAV)
 
-## The name
-The name is a namesake to a company I ran with a few friends during high school
-
 A re-implementation of the CryptoNode protocol in C# with some other goodies.
 
 CavCash aims to be a CryptoCurrency with privacy features similar to Monero.
 
 CavCash uses a SHA-256 proof of work hashing algorithm to keep the chain secure.
+
+## The name
+The name is a namesake to a company I ran with a few friends during high school
 
 ## Not yet launched
 CavCash has not yet launched a testnet or a production network. Currently testing is only done by running a node on localhost.
