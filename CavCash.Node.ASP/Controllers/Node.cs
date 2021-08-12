@@ -13,8 +13,9 @@ namespace CavCash.Node.ASP.Controllers
     {
         
         /*
-         *
-         *     case "transaction":
+            Code from legacy node software for reference (these switch cases should be added as endpoints)
+         
+                   case "transaction":
                         return await ReceiveTransaction(((JObject) message.Content).ToObject<Transaction>());
 
                     case "get_chain":
@@ -26,6 +27,7 @@ namespace CavCash.Node.ASP.Controllers
                     case "register_peer":
                         return await ReceivePeerRegistration(((JObject) message.Content).ToObject<Peer>());
          */
+         
         [HttpPost]
         [Route("transaction")]
         public async Task<object> MakeTransaction(Transaction t)
