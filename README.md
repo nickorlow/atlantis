@@ -1,5 +1,7 @@
 # Atlantis (ATL) (Formerly known as CavCash)
 
+This is a seperate project from CavCash the payment processor
+
 A re-implementation of the CryptoNode protocol in C# with some other goodies.
 
 Atlantis aims to be a CryptoCurrency with privacy features similar to Monero.
