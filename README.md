@@ -1,16 +1,16 @@
-# CavCash (CAV)
+# Atlantis (ATL) (Formerly known as CavCash)
 
 A re-implementation of the CryptoNode protocol in C# with some other goodies.
 
-CavCash aims to be a CryptoCurrency with privacy features similar to Monero.
+Atlantis aims to be a CryptoCurrency with privacy features similar to Monero.
 
-CavCash uses a SHA-256 proof of work hashing algorithm to keep the chain secure.
+Atlantis uses a SHA-256 proof of work hashing algorithm to keep the chain secure.
 
 ## The name
 The name is a namesake to a company I ran with a few friends during high school
 
 ## Not yet launched
-CavCash has not yet launched a testnet or a production network. Currently testing is only done by running a node on localhost.
+Atlantis has not yet launched a testnet or a production network. Currently testing is only done by running a node on localhost.
 
 ## Re-Implemented/Done Features
 - Stealth Addresses
@@ -31,7 +31,7 @@ A whitepaper is in the works. Will be posted here when it's closer to the final 
 ## Contributing
 Feel free to make PRs about whatever, if they're breaking or they go against some of the basic goals, it will not be merged but pretty much anything else will be.
 
-## Components
+## Components (Still using legacy naming scheme)
 
 ### CavCash.BlockExplore
 Our very own (poorly designed) block explorer. Mostly used for debugging. 
