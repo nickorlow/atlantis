@@ -1,5 +1,7 @@
 # Atlantis (ATL) (Formerly known as CavCash)
 
+IMPORTANT NOTE: Recently, I discovered that some of the code that validates signatures on transactions was working in a faulty manner and have not yet had time to make a patch. 
+
 This is a seperate project from CavCash the payment processor
 
 A re-implementation of the CryptoNode protocol in C# with some other goodies.
